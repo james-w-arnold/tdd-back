@@ -3,6 +3,6 @@ module.exports = {
         name: "todo.db"
     },
     server: {
-        port: 3001
+        port: process.env.PORT
     }
 }
