@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 const config = require('./config');
 const sqliteDAO = require('./dao');
 const TodoRepository = require('./todo');
 // parse json through body parser
 app.use(bodyParser.json());
+app.use(cors());
 
 //Setup database connection and repository 
 const dao = new sqliteDAO(config.db.name);
